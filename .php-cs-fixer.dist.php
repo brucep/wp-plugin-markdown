@@ -10,12 +10,9 @@ $finder = PhpCsFixer\Finder::create()
     ->in(['.'])
 ;
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config())
     ->setRules([
-        '@PSR2' => true,
         '@Symfony' => true,
-        'array_syntax' => ['syntax' => 'short'],
-        'ordered_imports' => true,
     ])
     ->setFinder($finder)
 ;
